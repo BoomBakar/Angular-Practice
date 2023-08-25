@@ -1,0 +1,13 @@
+<div id="main-body">
+<div class="main">
+    <div class="form-data">
+        <input type="text" [(ngModel)]="name">
+        <br><br>
+        <p>{{name}}</p>
+        <br>
+        <button [disabled]="isDisabled" (click)="checkName()">Change Name</button>
+    </div>
+</div>
+</div>
+
+

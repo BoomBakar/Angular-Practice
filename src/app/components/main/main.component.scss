@@ -1,0 +1,16 @@
+.main-body {
+    width: 100%;
+    height: calc(100vh - 200px);
+}
+
+
+
+.main {
+    float: left;
+    width: 75%;
+    height: calc(100vh - 200px);
+    background-color: #ece6e2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}  

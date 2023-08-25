@@ -1,11 +1,35 @@
 <div id="main-body">
 <div class="main">
-    <div class="form-data">
-        <input type="text" [(ngModel)]="name">
-        <br><br>
-        <p>{{name}}</p>
+    <div class="task">
+        <!-- <div class="btns">
+        <button type="button" class="btn-num" (click)="calculate(2)">Divided by 2</button>
+        <button type="button" class="btn-num" (click)="calculate(3)">Divided by 3</button>
+        <button type="button" class="btn-num" (click)="calculate(5)">Divided By 5</button>
+        <button type="button" class="btn-res" (click)="calculate(1)">Reset</button>
+    </div>
+    <div class="numbers">
+        <p
+        *ngFor="let num of numbers; let i = index"
+        [ngClass]="{
+          highlight: num % chosenNum === 0 && chosenNum > 1
+        }"
+        [ngStyle]="{'font-size': (num % chosenNum === 0 && chosenNum > 1) ? '30px' : '24px'}" >{{ num }}</p>
+    </div> -->
+
+    <input type="text" class="input" #myInput />
+    <button type="button" class="btn" (click)="check(myInput.value)">Add</button>
+    <div class="result">
+        <div [ngStyle]="myInput.value.length === 0 ? {'display': 'none'} : {'display': 'block'}">
+        <h3>Results</h3>
         <br>
-        <button [disabled]="isDisabled" (click)="checkName()">Change Name</button>
+        <p>Length = {{length}}</p>
+        <p *ngIf="containA">It contains a {{lengthA}} time</p>
+        <p *ngIf="containE">It contains e {{lengthE}} time</p>
+        <p *ngIf="containI">It contains i {{lengthI}} time</p>
+        <p *ngIf="containO">It contains o {{lengthO}} time</p>
+        <p *ngIf="containU">It contains u {{lengthU}} time</p>
+
+    </div>
     </div>
 </div>
 </div>
